@@ -19,7 +19,8 @@ class CycleSwap {
     static void cycleSwap(int[] array, int shift) {
 
         int[] ints = new int[array.length];
-
+        if(shift > array.length)
+            return;
         int sub = shift;
         for (int i = 0; i < shift; i++) {
             ints[i] = array[array.length-(sub)];
